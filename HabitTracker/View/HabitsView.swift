@@ -8,8 +8,10 @@ struct HabitsView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(habits.items) { item in
-                    HabitRow(habit: item)
+                ForEach(0..<habits.items.count, id: \.self) { index in
+                    NavigationLink(destination: HabitDetailView(habits: self.habits, index: index)) {
+                        HabitRow(habit: self.habits.items[index])
+                    }
                 }
                 .onDelete(perform: removeItems)
             }

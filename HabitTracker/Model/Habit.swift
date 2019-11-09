@@ -5,4 +5,8 @@ struct Habit: Codable, Identifiable {
     let title: String
     let description: String
     var completions: [Date] = []
+    
+    mutating func addCompletion() {
+        self.completions.append(Date())
+    }
 }
