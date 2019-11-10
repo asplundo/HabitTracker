@@ -18,7 +18,24 @@
 		100F09BE237700FC00CBF16F /* HabitRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F09BD237700FC00CBF16F /* HabitRow.swift */; };
 		100F09C02377042800CBF16F /* AddHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F09BF2377042800CBF16F /* AddHabitView.swift */; };
 		100F09C223773E0200CBF16F /* HabitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F09C123773E0200CBF16F /* HabitDetailView.swift */; };
+		1093C0B523786415005A15F7 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1093C0B423786415005A15F7 /* Charts.framework */; };
+		1093C0B623786415005A15F7 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1093C0B423786415005A15F7 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1093C0BB237864E4005A15F7 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1093C0BA237864E4005A15F7 /* ChartView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1093C0B723786415005A15F7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1093C0B623786415005A15F7 /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		100F099E2376FC6000CBF16F /* HabitTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,6 +51,8 @@
 		100F09BD237700FC00CBF16F /* HabitRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitRow.swift; sourceTree = "<group>"; };
 		100F09BF2377042800CBF16F /* AddHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitView.swift; sourceTree = "<group>"; };
 		100F09C123773E0200CBF16F /* HabitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailView.swift; sourceTree = "<group>"; };
+		1093C0B423786415005A15F7 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = Carthage/Build/iOS/Charts.framework; sourceTree = "<group>"; };
+		1093C0BA237864E4005A15F7 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1093C0B523786415005A15F7 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +72,7 @@
 			children = (
 				100F09A02376FC6000CBF16F /* HabitTracker */,
 				100F099F2376FC6000CBF16F /* Products */,
+				1093C0B323786415005A15F7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +110,7 @@
 		100F09B52376FC6D00CBF16F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1093C0B9237864D1005A15F7 /* UIKit */,
 				100F09BB2376FE9D00CBF16F /* HabitsView.swift */,
 				100F09BD237700FC00CBF16F /* HabitRow.swift */,
 				100F09BF2377042800CBF16F /* AddHabitView.swift */,
@@ -106,6 +128,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		1093C0B323786415005A15F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1093C0B423786415005A15F7 /* Charts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1093C0B9237864D1005A15F7 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				1093C0BA237864E4005A15F7 /* ChartView.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -116,6 +154,8 @@
 				100F099A2376FC6000CBF16F /* Sources */,
 				100F099B2376FC6000CBF16F /* Frameworks */,
 				100F099C2376FC6000CBF16F /* Resources */,
+				1093C0B723786415005A15F7 /* Embed Frameworks */,
+				1093C0B82378643A005A15F7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -176,6 +216,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1093C0B82378643A005A15F7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		100F099A2376FC6000CBF16F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -186,6 +246,7 @@
 				100F09C02377042800CBF16F /* AddHabitView.swift in Sources */,
 				100F09A42376FC6000CBF16F /* SceneDelegate.swift in Sources */,
 				100F09BE237700FC00CBF16F /* HabitRow.swift in Sources */,
+				1093C0BB237864E4005A15F7 /* ChartView.swift in Sources */,
 				100F09BC2376FE9D00CBF16F /* HabitsView.swift in Sources */,
 				100F09C223773E0200CBF16F /* HabitDetailView.swift in Sources */,
 				100F09B82376FCB600CBF16F /* Habit.swift in Sources */,
@@ -328,6 +389,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"HabitTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = 95J6QC3H48;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HabitTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -348,6 +413,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"HabitTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = 95J6QC3H48;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HabitTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
